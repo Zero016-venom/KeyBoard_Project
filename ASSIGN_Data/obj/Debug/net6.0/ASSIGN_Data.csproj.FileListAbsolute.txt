@@ -1,0 +1,14 @@
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\bin\Debug\net6.0\ASSIGN_Data.deps.json
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\bin\Debug\net6.0\ASSIGN_Data.runtimeconfig.json
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\bin\Debug\net6.0\ASSIGN_Data.dll
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\bin\Debug\net6.0\ASSIGN_Data.pdb
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ASSIGN_Data.csproj.AssemblyReference.cache
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ASSIGN_Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ASSIGN_Data.AssemblyInfoInputs.cache
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ASSIGN_Data.AssemblyInfo.cs
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ASSIGN_Data.csproj.CoreCompileInputs.cache
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ASSIGN_Data.dll
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\refint\ASSIGN_Data.dll
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ASSIGN_Data.pdb
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ASSIGN_Data.genruntimeconfig.cache
+E:\CODE\VisualStudio\Web ASP.Net Core\School\ASSIGN_NET104\ASSIGN_Data\obj\Debug\net6.0\ref\ASSIGN_Data.dll

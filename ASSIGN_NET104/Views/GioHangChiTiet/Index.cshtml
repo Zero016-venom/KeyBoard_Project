@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ASSIGN_Data.Models.GioHangCT>
+
+@{
+    ViewData["Title"] = "Index";
+    var userName = TempData["Username"];
+}
+
+
+@if(userName == null)
+{
+    <h3>Bạn chưa đăng nhập tài khoản</h3>
+}
+else
+{
+    <h3>Giỏ hàng của <a style="text-decoration: none" class="">@userName</a></h3>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Tên sản phẩm")
+            </th>
+            <th>
+                @Html.DisplayName("Số lượng")
+            </th>
+            <th>
+                @Html.DisplayName("Trạng thái")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SanPham.Ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @if (item.TrangThai == 1)
+                {
+                    <span class="badge btn-success">Còn hàngg</span>
+                }
+                else if(item.TrangThai == 2)
+                {
+                   <span class="badge btn-danger">Hết hàng mất rùii</span>
+                }
+            </td>
+            
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

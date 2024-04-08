@@ -1,0 +1,68 @@
+﻿@model ASSIGN_Data.Models.SanPham
+
+@{
+    ViewData["Title"] = "Update";
+    List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".gif", "jpeg", "webp" };
+}
+
+<h3>Cập nhật sản phẩm</h3>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ten" class="control-label">Tên sản phẩm</label>
+                <input asp-for="Ten" class="form-control my-md-2" />
+                <span asp-validation-for="Ten" class="text-danger "></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_LoaiSP" class="control-label">Loại sản phẩm</label>
+                <select asp-for="Id_LoaiSP" class="form-control my-md-2" asp-items="ViewBag.LoaiSP">
+                    <option value="">-- Chọn loại sản phẩm --</option>
+                </select>
+                <span asp-validation-for="Id_LoaiSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GiaSP" class="control-label">Giá</label>
+                <input asp-for="GiaSP" class="form-control my-md-2" />
+                <span asp-validation-for="GiaSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SLTon" class="control-label">Số lượng tồn</label>
+                <input asp-for="SLTon" class="form-control my-md-2" />
+                <span asp-validation-for="SLTon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrangThai" class="control-label">Trạng thái</label>
+                <select asp-for="TrangThai" class="form-control my-md-2">
+                    <option value="1">Đang hoạt động</option>
+                    <option value="2">Tạm ngưng</option>
+                </select>
+                <span asp-validation-for="TrangThai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MauSac" class="control-label">Màu sắc</label>
+                <input asp-for="MauSac" class="form-control my-md-2" />
+                <span asp-validation-for="MauSac" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Anh" class="control-label">Hình ảnh</label>
+                <input asp-for="Anh" class="form-control my-md-2" type="file" name="imgFile"/>
+                <span asp-validation-for="Anh" class="text-danger"></span>
+            </div>
+            <div class="form-group my-md-3">
+                <input type="submit" value="Sửa" class="btn btn-warning text-white" />
+                <a asp-action="Index" class="btn btn-secondary ms-md-2">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

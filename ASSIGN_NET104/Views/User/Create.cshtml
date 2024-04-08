@@ -1,0 +1,67 @@
+﻿@model ASSIGN_Data.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3 class="text-center mt-5">Tạo tài khoản</h3>
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+    <div class="col-md-4 ">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HoTen" class="control-label">Họ và tên</label>
+                <input asp-for="HoTen" class="form-control my-md-2 border rounded-3" />
+                <span asp-validation-for="HoTen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_Role" class="control-label ">Quyền truy cập</label>
+                <select asp-for="Id_Role" class="form-control my-md-2 border rounded-3" asp-items="ViewBag.Role">
+                    <option value="2" selected>-- Chọn quyền truy cập --</option>
+                </select>
+                <span asp-validation-for="Id_Role" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control my-md-2 border rounded-3" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenDN" class="control-label">Tên đăng nhập</label>
+                <input asp-for="TenDN" class="form-control my-md-2 border rounded-3" />
+                <span asp-validation-for="TenDN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatKhau" class="control-label">Mật khẩu</label>
+                <input asp-for="MatKhau" type="password" class="form-control my-md-2 border rounded-3" />
+                <span asp-validation-for="MatKhau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SDT" class="control-label">Số điện thoại</label>
+                <input asp-for="SDT" class="form-control my-md-2 border rounded-3" />
+                <span asp-validation-for="SDT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiaChi" class="control-label">Địa chỉ</label>
+                <input asp-for="DiaChi" class="form-control my-md-2 border rounded-3" />
+                <span asp-validation-for="DiaChi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgaySinh" class="control-label">Ngày sinh</label>
+                <input asp-for="NgaySinh" class="form-control my-md-2 border rounded-3" />
+                <span asp-validation-for="NgaySinh" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-5 mb-4">
+                <input type="submit" value="Tạo tài khoản" class="btn btn-dark text-white w-100 bold" />
+                <a asp-action="Login" class="btn btn-white text-dark w-100 my-md-4 py-2">Quay lại trang đăng nhập</a>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
