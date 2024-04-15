@@ -29,33 +29,36 @@ namespace ASSIGN_NET104.Controllers
             {
                 return Content("Bạn phải đăng nhập trước khi vào giỏ hàng");
             }
-            
+
             return View(userCart);
 		}
 
-        /*
-		 * var loginData = userRepos.GetAll().FirstOrDefault(p => p.TenDN == username && p.MatKhau == password);
-            if (loginData == null)
-            {
-                return Content("Đăng nhập thất bại");
-            }
-            else
-            {
-                HttpContext.Session.SetString("user", loginData.Id.ToString());
-                return RedirectToAction("IndexKH", "SanPham");
-            }
-		public IActionResult Update(Guid id)
-		{
-			var userCart = gioHangCTRepos.GetByID(id);
-			return View(userCart);
-		}
-		[HttpPost]
-        public IActionResult Update(GioHangCT gioHangCT)
+        public IActionResult ThanhToan()
         {
-			gioHangCTRepos.UpdateObj(gioHangCT);
-            return RedirectToAction("Index", "GioHangChiTiet");
+            var loginData = HttpContext.Session.GetString("user");
+            var userCart = context.GioHangCTs.Where(temp => temp.Id_User == Guid.Parse(loginData)).ToList();
+
+            foreach (var item in userCart)
+            {
+                var product = context.SanPhams.FirstOrDefault(temp => temp.Id == item.ID_SP);
+
+                if(product != null)
+                {
+                    product.SLTon -= item.SoLuong;
+                }
+            }
+
+            context.GioHangCTs.RemoveRange(userCart);
+            context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
-		*/
+        //public IActionResult Remove()
+        //{
+        //    var loginData = HttpContext.Session.GetString("user");
+        //    var userCart = context.GioHangCTs.Where(temp => temp.Id_User == Guid.Parse(loginData)).ToList();
+
+        //}
     }
 }

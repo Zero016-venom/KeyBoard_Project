@@ -55,7 +55,14 @@ else
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
             </td>
+
         </tr>
 }
     </tbody>
 </table>
+
+    <div class="text-center mt-5">
+        @*<button class="btn btn-secondary" asp-controller="GioHangChiTiet" asp-action="ThanhToan">Thanh Toán</button>*@
+        <a href="@Url.Action("ThanhToan", "GioHangChiTiet")" class="btn btn-secondary">Thanh Toán</a>
+    </div>
+

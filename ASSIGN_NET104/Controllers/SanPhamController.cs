@@ -78,16 +78,11 @@ namespace ASSIGN_NET104.Controllers
                 var stream = new FileStream(path, FileMode.Create);
                 imgFile.CopyTo(stream);
                 sanPham.Anh = imgFile.FileName;
-            }
-            else
-            {
-                var existingSanPham = sanPhamRepos.GetByID(sanPham.Id); 
-                sanPham.Anh = existingSanPham.Anh; 
-            }
+            } 
 
-            sanPhamRepos.UpdateObj(sanPham);
+			sanPhamRepos.UpdateObj(sanPham);
 
-            return RedirectToAction("Index");
+			return RedirectToAction("Index");
         }
 
         public IActionResult Delete(Guid id)
@@ -131,7 +126,6 @@ namespace ASSIGN_NET104.Controllers
                 bool checkSelected = false;
                 Guid idGHCT = Guid.Empty;
                 
-
                 foreach (var item in userCart)
                 {
                     if (item.ID_SP == id)
@@ -144,31 +138,14 @@ namespace ASSIGN_NET104.Controllers
 
                 if(!checkSelected)
                 {
-                    //GioHangCT gioHangCT = new GioHangCT()
-                    //{
-                    //    Id_GHCT = Guid.NewGuid(),
-                    //    ID_SP = id,
-                    //    Id_User = Guid.Parse(loginData),
-                    //    SoLuong = amount,
-                    //    TrangThai = 1
-                    //};
-
-                    SanPham sp = new SanPham();
                     GioHangCT gioHangCT = new GioHangCT()
                     {
                         Id_GHCT = Guid.NewGuid(),
                         ID_SP = id,
                         Id_User = Guid.Parse(loginData),
-                        SoLuong = amount
+                        SoLuong = amount,
+                        TrangThai = 1
                     };
-                    if(sp.TrangThai == 1)
-                    {
-                        gioHangCT.TrangThai = 1;
-                    }
-                    else
-                    {
-                        gioHangCT.TrangThai = 2;
-                    }
 
                     ghctRepos.CreateObj(gioHangCT);
 

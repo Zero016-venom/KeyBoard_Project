@@ -2,63 +2,58 @@
 
 @{
 	ViewData["Title"] = "IndexKH";
-	List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".gif", "jpeg", "webp" };
+	List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".gif", ".jpeg", ".webp" };
 }
 <form asp-controller="SanPham" asp-action="IndexKH" method="get">
 	<div class="row">
 		@foreach (var item in Model)
 		{
-				<div class="col-md-4 mb-4">
-					<div class="card" style="height: 480px">
-						<div class="card-body">
-							<div class="bg-light d-flex justify-content-center">
-							@{
-								var extension = System.IO.Path.GetExtension(item.Anh);
-							}
-							@if (@extensions.Contains(extension))
-							{
-								<a asp-action="DetailsKH">
-									<img src="~/Images/@item.Anh" height="200px" width="350px">
-								</a>
-							}
+			<div class="col-md-4 mb-4">
+				<div class="card" style="height: 480px">
+					<div class="card-body">
+						<div class="bg-light d-flex justify-content-center">
+						@{
+							var extension = System.IO.Path.GetExtension(item.Anh);
+						}
+						@if (@extensions.Contains(extension))
+						{
+							<a asp-action="DetailsKH">
+								<img src="~/Images/@item.Anh" height="200px" width="350px">
+							</a>
+						}
+						</div>
+						<div class="p-4 text-center link-plain">
+							@Html.ActionLink(@item.Ten, "DetailsKH", new { id = item.Id })
+						</div>
+						<div class="text-center mb-3">
+							<span style="font-size: 17px;" class=""><b>@string.Format("{0:0,0}", @item.GiaSP) VNĐ</b></span>
+						</div>
+						<div class="btn-group d-flex justify-content-between mb-2">
+							<div>
+								@if (item.TrangThai == 1)
+								{
+									<span class="badge btn-success">Còn hàng</span>
+								}
+								else if (item.TrangThai == 2)
+								{
+									<span class="badge btn-danger">Hết hàng</span>
+								}
 							</div>
-							<div class="p-4 text-center link-plain">
-								@Html.ActionLink(@item.Ten, "DetailsKH", new { id = item.Id })
-							</div>
-							<div class="text-center mb-3">
-								<span style="font-size: 17px;" class=""><b>@string.Format("{0:0,0}", item.GiaSP) VNĐ</b></span>
-							</div>
-							<div class="btn-group d-flex justify-content-between mb-2">
-								<div>
-									@if (item.TrangThai == 1)
-									{
-										<span class="btn btn-success">Còn hàng</span>
-									}
-									else if (item.TrangThai == 2)
-									{
-										<span class="btn btn-danger">Hết hàng</span>
-									}
+								@using (Html.BeginForm("AddToCart", "SanPham", FormMethod.Post))
+								{
+									@Html.Hidden("id", item.Id)
+								<div class="form-group d-flẽ justify-content-evenly">
+									<label for="quantity" class="control-label">Số lượng</label>
+									<input type="text" name="amount" id="amount" class="form-control" style="width: 50px"/>
 								</div>
-								<div>
-									@using (Html.BeginForm("AddToCart", "SanPham", FormMethod.Post))
-									{
-										@Html.Hidden("id", item.Id) <!-- Thay yourIdValue bằng giá trị id thực tế -->
-									<div class="form-group">
-										<label for="quantity" class="control-label">Số lượng</label>
-									</div>
-									<div>
-										<input type="text" name="amount" id="amount" class="form-control" style="width: 50px"/>
-									</div>
-									<div class="form-group ">
-										<input type="submit" value="Thêm vào giỏ hàng" class="btn btn-dark" />
-									</div>
-									}
+								<div class="form-group ">
+									<input type="submit" value="Thêm vào giỏ hàng" class="btn btn-dark" />
 								</div>
-							</div>
-
+								}
 						</div>
 					</div>
 				</div>
+			</div>
 		}
 	</div>
 </form>

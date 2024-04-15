@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NNvUP5kz2Rf4dijOOOgALk5bJwMxGSP/4R3pjt5NcJY=",
+  "Hash": "g7NIHv5Or0SDTDmbkBZ3oNTRFGgANsDnaxJdhP5wIv8=",
   "Source": "ASSIGN_NET104",
   "BasePath": "_content/ASSIGN_NET104",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\1lurorao.png"
+    },
+    {
+      "Identity": "E:\\CODE\\VisualStudio\\Web ASP.Net Core\\School\\ASSIGN_NET104\\ASSIGN_NET104\\wwwroot\\Images\\1re0i64i.png",
+      "SourceId": "ASSIGN_NET104",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\CODE\\VisualStudio\\Web ASP.Net Core\\School\\ASSIGN_NET104\\ASSIGN_NET104\\wwwroot\\",
+      "BasePath": "_content/ASSIGN_NET104",
+      "RelativePath": "Images/1re0i64i.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\1re0i64i.png"
     },
     {
       "Identity": "E:\\CODE\\VisualStudio\\Web ASP.Net Core\\School\\ASSIGN_NET104\\ASSIGN_NET104\\wwwroot\\Images\\3jqnbpoo.png",
@@ -338,6 +355,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\grocery-store.png"
+    },
+    {
+      "Identity": "E:\\CODE\\VisualStudio\\Web ASP.Net Core\\School\\ASSIGN_NET104\\ASSIGN_NET104\\wwwroot\\Images\\ipb4ciol.png",
+      "SourceId": "ASSIGN_NET104",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\CODE\\VisualStudio\\Web ASP.Net Core\\School\\ASSIGN_NET104\\ASSIGN_NET104\\wwwroot\\",
+      "BasePath": "_content/ASSIGN_NET104",
+      "RelativePath": "Images/ipb4ciol.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ipb4ciol.png"
+    },
+    {
+      "Identity": "E:\\CODE\\VisualStudio\\Web ASP.Net Core\\School\\ASSIGN_NET104\\ASSIGN_NET104\\wwwroot\\Images\\itlbktug.png",
+      "SourceId": "ASSIGN_NET104",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\CODE\\VisualStudio\\Web ASP.Net Core\\School\\ASSIGN_NET104\\ASSIGN_NET104\\wwwroot\\",
+      "BasePath": "_content/ASSIGN_NET104",
+      "RelativePath": "Images/itlbktug.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\itlbktug.png"
     },
     {
       "Identity": "E:\\CODE\\VisualStudio\\Web ASP.Net Core\\School\\ASSIGN_NET104\\ASSIGN_NET104\\wwwroot\\Images\\jjmy0jy9.png",
